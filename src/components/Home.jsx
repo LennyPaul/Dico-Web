@@ -9,7 +9,10 @@ export const Home = () => {
     navigate("/search");
   };
 
-  const goToDefinitions = (categorie) => {};
+  const goToDefinitions = (categorieID) => {
+    navigate("/definitions", { state: { categorieID } });
+    console.log({ categorieID });
+  };
 
   return (
     <>
@@ -21,7 +24,7 @@ export const Home = () => {
           <div className="logo">
             <img src={logo} alt="" />
           </div>
-          <h2>Votre lexique du designer.</h2>
+          <h2>Votre lexique du designer</h2>
         </section>
 
         <section className="search">
@@ -38,14 +41,45 @@ export const Home = () => {
         </section>
         <section className="cat">
           <div>
-            <button>UI-UX</button>
-            <button>COLORIMETRIE</button>
-            <button>TYPOGRAPHIE</button>
+            <button
+              value="4  "
+              onClick={(event) => goToDefinitions(event.target.value)}
+            >
+              UI-UX
+            </button>
+            <button
+              value="5"
+              onClick={(event) => goToDefinitions(event.target.value)}
+            >
+              COLORIMETRIE
+            </button>
+            <button
+              value="6"
+              onClick={(event) => goToDefinitions(event.target.value)}
+            >
+              TYPOGRAPHIE
+            </button>
           </div>
           <div>
-            <button>GRAPHISME</button>
-            <button>PRINT</button>
-            <button>MOTION</button>
+            <button
+              value="7"
+              onClick={(event) => goToDefinitions(event.target.value)}
+            >
+              GRAPHISME
+            </button>
+            <button
+              value="8"
+              onClick={(event) => goToDefinitions(event.target.value)}
+            >
+              {" "}
+              PRINT
+            </button>
+            <button
+              value="9"
+              onClick={(event) => goToDefinitions(event.target.value)}
+            >
+              MOTION
+            </button>
           </div>
         </section>
       </main>
