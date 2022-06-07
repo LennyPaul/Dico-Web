@@ -1,5 +1,4 @@
 import { SearchInput } from "./SearchInput";
-import logo from "../img/logo.svg";
 import { SearchPropositions } from "./SearchPropositions";
 import { useState } from "react";
 import { Header } from "./Header";
